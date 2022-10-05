@@ -1,0 +1,175 @@
+@use "../../assets/scss/colors" as *;
+@use "../../assets/scss/button" as *;
+@use "../../assets/scss/typograph" as *;
+
+#gallery {
+  width: 100%;
+  padding: 0 3% 10rem;
+  background-color: $white;
+
+  .header-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+
+    .title-gallery {
+      @include font--josefin;
+      color: $black;
+      text-transform: uppercase;
+      font-size: 5rem;
+    }
+
+    .btn-gallery-top {
+      @include button--gallery;
+    }
+  }
+
+  .grid-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+
+    .grid-item {
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0px 7px 15px 1px rgba($black, 0.72);
+      transition: 350ms ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      h3 {
+        @include font--josefin;
+        text-transform: uppercase;
+        font-size: 3rem;
+        bottom: 3rem;
+        left: 3rem;
+        display: inline-block;
+        position: absolute;
+        color: $white;
+        width: 60%;
+      }
+
+      .overlay-grid {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba($black, 0.2),
+          rgba($black, 0.6)
+        );
+        top: 0;
+        transition: 350ms ease-in-out;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          transform: translate(0, -0.5rem);
+
+          .overlay-grid {
+            background: $very--dark--gray;
+            opacity: 0.2;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-gallery {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto 0;
+
+    .btn-gallery-botton {
+      @include button--gallery;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #gallery {
+    .grid-gallery {
+      .grid-item {
+        h3 {
+          font-size: 2.5rem;
+          bottom: 2rem;
+          left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery {
+    .header-gallery {
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .btn-gallery-top {
+        display: none;
+      }
+    }
+
+    .grid-gallery {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .bottom-gallery {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #gallery {
+    .header-gallery {
+      .title-gallery {
+        font-size: 5rem;
+      }
+    }
+
+    .grid-gallery {
+      grid-template-columns: auto;
+      gap: 3rem;
+
+      .grid-item {
+        h3 {
+          font-size: 2.5rem;
+          bottom: 1.3rem;
+          left: 1.3rem;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #gallery {
+    .header-gallery {
+      .title-gallery {
+        font-size: 3rem;
+      }
+    }
+    .grid-gallery {
+      .grid-item {
+        h3 {
+          font-size: 2rem;
+          bottom: 1rem;
+          left: 1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

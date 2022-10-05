@@ -1,0 +1,138 @@
+@use "../../assets/scss/colors" as *;
+@use "../../assets/scss/typograph" as *;
+@use "../../assets/scss/after--state" as *;
+
+#footer {
+  width: 100%;
+  padding: 3rem 3% 0;
+  background: $black;
+
+  .footer-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    margin-bottom: 2rem;
+  }
+
+  .footer-menu {
+    width: 45%;
+
+    .footer-menu-nav {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .footer-menu-link {
+      @include font--alata;
+      font-size: 1.5rem;
+      color: $white;
+      position: relative;
+      @include after;
+    }
+
+    @media (hover: hover) {
+      .footer-menu-item:hover .footer-menu-link::after {
+        @include after-hover;
+      }
+    }
+  }
+
+  .social-media {
+    width: 45%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .social-media-menu {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+
+    .social-media-link {
+      position: relative;
+      @include after;
+    }
+
+    @media (hover: hover) {
+      .social-media-item:hover .social-media-link::after {
+        @include after-hover;
+      }
+    }
+
+    .rights {
+      @include font--alata;
+      font-size: 1.5rem;
+      color: $dark--gray;
+      position: relative;
+      text-align: center;
+    }
+  }
+
+  .attribution {
+    width: 100%;
+    @include font--alata;
+    font-size: 1.5rem;
+    color: $white;
+    text-align: center;
+    margin: 4rem auto 2rem;
+
+    a {
+      color: hsl(101, 86%, 44%);
+      transition: 350ms ease-in-out;
+
+      @media (hover: hover) {
+        &:hover {
+          color: hsl(192, 88%, 49%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #footer {
+    .footer-wrap {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .footer-menu {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .footer-menu-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+    }
+
+    .social-media {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .social-media-menu {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin: 3rem auto 2rem;
+      }
+    }
+  }
+}

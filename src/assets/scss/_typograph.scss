@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+@mixin font--alata {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+@mixin font--josefin {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}

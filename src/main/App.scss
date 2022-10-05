@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+// font-family: 'Alata', sans-serif; 400
+// font-family: 'Josefin Sans', sans-serif; 300
+
+.App {
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem;
+}

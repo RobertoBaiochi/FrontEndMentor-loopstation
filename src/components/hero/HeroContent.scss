@@ -1,0 +1,50 @@
+@use "../../assets/scss/colors" as *;
+@use "../../assets/scss/typograph" as *;
+
+.hero-content {
+  margin: 13rem auto;
+  max-height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .hero-title {
+    width: 16ch;
+    @include font--josefin;
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    line-break: normal;
+    text-transform: uppercase;
+    border: 0.4rem solid $white;
+    display: inline-block;
+    padding: 3rem;
+    color: $white;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin: 16rem auto;
+  }
+}
+
+@media (max-width: 585px) {
+  .hero-content {
+    align-items: center;
+    justify-content: center;
+
+    .hero-title {
+      font-size: 3em;
+      line-height: 5rem;
+      padding: 5%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-content {
+    .hero-title {
+      font-size: 2em;
+      line-height: 4rem;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use "../../assets/scss/colors" as *;
+@use "../../assets/scss/typograph" as *;
+
+#menu-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu-mobile {
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    padding: 4rem 3%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    gap: 2rem;
+    background-color: $black;
+    z-index: 3;
+    opacity: 0;
+    transition: 350ms ease-in-out;
+
+    .mobile-wrap {
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-mobile-menu {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .mobile-logo-menu {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        img {
+          min-width: 140px;
+        }
+      }
+
+      .close-icon {
+        display: block;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+
+    .mobile-menu-nav {
+      height: 100%;
+    }
+
+    .mobile-menu-list {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+
+      .mobile-menu-link {
+        display: block;
+        @include font--josefin;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        font-size: 2.5rem;
+        color: $white;
+      }
+    }
+  }
+
+  #menu-mobile.active {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+
+  .menu-active {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,22 @@
+@use './colors' as *;
+
+@mixin button--gallery {
+    background-color: $white;
+    color: $black;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    padding: 1.2rem 4rem;
+    border: none;
+    border-radius: 2px;
+    outline: 2px solid $black;
+    transition: 350ms ease-in-out;
+    cursor: pointer;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $black;
+            color: $white;
+          }
+    }
+}

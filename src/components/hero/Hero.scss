@@ -1,0 +1,14 @@
+#hero {
+  width: 100%;
+  padding: 4rem 3%;
+  background-image: url("../../assets/images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background-image: url("../../assets/images/mobile/image-hero.jpg");
+  }
+}

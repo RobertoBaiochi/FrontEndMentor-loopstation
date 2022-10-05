@@ -1,0 +1,73 @@
+@use "../../assets/scss/colors" as *;
+@use "../../assets/scss/typograph" as *;
+@use "../../assets/scss/after--state" as *;
+
+.Header.Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .logo-menu {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    img {
+      min-width: 140px;
+    }
+  }
+
+  .menu-hamburger {
+    display: none;
+    align-items: center;
+  }
+
+  .menu-header {
+    width: 70%;
+    
+    .menu-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4rem;
+    }
+    
+    .menu-link {
+      @include font--alata;
+      color: $white;
+      font-size: 1.5rem;
+      position: relative;
+      @include after;
+    }
+
+    @media (hover: hover) {
+      .menu-item:hover .menu-link::after {
+        @include after-hover;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Header.Container {
+    .menu-hamburger {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .open-menu {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+      }
+    }
+
+    .menu-header {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin after {
+    
+    &::after {
+        content: '';
+        width: 20%;
+        height: 2px;
+        background-color: White;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: 350ms ease-in-out;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin after-hover {
+    width: 75%;
+    top: 130%;
+    opacity: 1;
+}
