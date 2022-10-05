@@ -30,27 +30,27 @@ function MenuMobile() {
           <nav className="mobile-menu-nav">
             <ul className="mobile-menu-list">
               <li className="mobile-menu-item">
-                <a className="mobile-menu-link" href="/void">
+                <a className="mobile-menu-link" href="#void">
                   About
                 </a>
               </li>
               <li className="mobile-menu-item">
-                <a className="mobile-menu-link" href="/void">
+                <a className="mobile-menu-link" href="#void">
                   Careers
                 </a>
               </li>
               <li className="mobile-menu-item">
-                <a className="mobile-menu-link" href="/void">
+                <a className="mobile-menu-link" href="#void">
                   Events
                 </a>
               </li>
               <li className="mobile-menu-item">
-                <a className="mobile-menu-link" href="/void">
+                <a className="mobile-menu-link" href="/#void">
                   Products
                 </a>
               </li>
               <li className="mobile-menu-item">
-                <a className="mobile-menu-link" href="/void">
+                <a className="mobile-menu-link" href="#void">
                   Support
                 </a>
               </li>
