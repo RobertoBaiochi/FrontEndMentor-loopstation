@@ -45,7 +45,7 @@ function MenuMobile() {
                 </a>
               </li>
               <li className="mobile-menu-item">
-                <a className="mobile-menu-link" href="/#void">
+                <a className="mobile-menu-link" href="#void">
                   Products
                 </a>
               </li>
