@@ -6,7 +6,6 @@ function Gallery() {
   const gallery = galleryData.map((gallery) => {
     return (
       <div key={gallery.id} className="grid-item">
-        <div className="overlay-grid"></div>
         <h3>{gallery.title}</h3>
         <a href={gallery.link}>
           <picture>
